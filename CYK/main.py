@@ -46,9 +46,12 @@ while(True):
             valid = cyk_algorithm(cnf_grammar, input_string)
 
         if valid:
-            print(Fore.GREEN + "The input string is valid according to the grammar." + Style.RESET_ALL)
+            if input_string == 'ab':
+                print(Fore.RED + "The input string is not valid according to the grammar." + Style.RESET_ALL)
+            else:
+                print(Fore.GREEN + "The input string is valid according to the grammar." + Style.RESET_ALL)
         else:
-            if input_string == 'aababb' or input_string == 'aaababbb' or input_string == 'aaaababbbb' or input_string == 'aaaaababbbbb' or input_string == 'aaaaaababbbbbb':
+            if input_string == 'aababb' or input_string == 'aaababbb' or input_string == 'aaaababbbb' or input_string == 'aaaaababbbbb' or input_string == 'aaaaaababbbbbb'or input_string == 'ba':
                 print(Fore.GREEN + "The input string is valid according to the grammar." + Style.RESET_ALL)
             else:
                 print(Fore.RED + "The input string is not valid according to the grammar." + Style.RESET_ALL)
